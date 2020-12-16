@@ -1,0 +1,84 @@
+/**
+ * abstracts/variables
+ * ===============
+ */
+
+
+// Colour variables
+$color-dark-blue: #2d314d;
+$color-lime-green: hsl(136, 65%, 51%);
+$color-bright-cyan: hsl(192, 70%, 51%);
+$color-grayish-blue: hsl(233, 8%, 62%);
+$color-light-grayish-blue: hsl(220, 16%, 96%);
+$color-very-light-gray: hsl(0, 0%, 98%);
+$color-white: hsl(0, 0%, 100%);
+
+
+// font variables
+$font-family-base: 'Public Sans', sans-serif;
+$font-family-secondary: serif;
+
+
+// font size variables
+$font-size-xs: .75rem;
+$line-height-xs: 1rem;
+
+// $font-size-sm: .875rem;
+// $line-height-sm: 1.25rem;
+
+$font-size-sm: .9rem;
+$line-height-sm: 1.25rem;
+
+$font-size-base: 1rem;
+$line-height-base: 1.5rem;
+
+$font-size-lg: 1.125rem;
+$line-height-lg: 1.75rem;
+
+$font-size-xl: 1.25rem;
+$line-height-xl: 1.75rem;
+
+$font-size-2xl: 1.5rem;
+$line-height-2xl: 2rem;
+
+$font-size-3xl: 1.75em; 
+$line-height-3xl: 2.25rem;
+
+$font-size-4xl: 2rem; 
+$line-height-4xl: 2.5rem;
+
+$font-size-5xl: 2.5rem; 
+$line-height-5xl: 1.25;
+
+$font-size-6xl: 3rem;
+$line-height-6xl: 1;
+
+$font-size-7xl: 4.5rem;
+$line-height-7xl: 1;
+
+$font-size-8xl: 6rem;
+$line-height-8xl: 1;
+
+$font-size-9xl: 8rem;
+$line-height-9xl: 1;
+
+
+
+$letter-spacing-xs: -0.1em;
+$letter-spacing-sm: -0.03em;
+$letter-spacing-base: 0;
+$letter-spacing-lg: 0.1em;
+
+
+
+
+
+// EXAMPLES........
+
+
+// Spacing variables
+$paragraph-space-xs: 15px;
+$paragraph-space-md: 20px;
+$paragraph-space-lg: 35px;
+
+

@@ -1,0 +1,39 @@
+/**
+ * base/global
+ * ===========
+ */
+
+ 
+ /**
+ * ??
+ */
+
+ @media (max-width:600px){
+    body{
+        
+    }
+}
+body{
+    // width: 100%;
+    
+}
+
+
+/**
+ * button reset
+ */
+
+ button {
+    display: inline-block;
+    border: none;
+    background:none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    outline:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}

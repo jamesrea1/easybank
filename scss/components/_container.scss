@@ -1,0 +1,24 @@
+/**
+ * components/container
+ * ====================
+ */
+
+.container{
+    @include d-border(red);
+    
+    position:relative;
+    background: $color-white;
+
+    //psuedo
+    //nested
+    //@media
+      
+    &__inner{
+        
+    }
+
+    &--header{
+        z-index:10;
+    }
+
+}

@@ -1,0 +1,49 @@
+/**
+ * components/hero
+ * ====================
+ */
+
+.hero{
+  background: $color-very-light-gray;
+  padding-bottom:80px;
+  max-width: 800px;
+  
+  &__image-wrap{
+    background: url(../../images/bg-intro-mobile.svg)
+                right bottom / cover
+                no-repeat;
+    margin-bottom:32px;
+    overflow:hidden;
+    
+    // @include d-bg;
+    display:flex; 
+    justify-content: space-around;
+    height:40vh;
+    min-height:200px;
+  }
+  &__image{
+    // @include d-border;    
+    height: 150%;
+    transform: translatey(-34%);    
+    img{
+      width: auto;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &__content{
+    margin:0 20px;
+    text-align:center;
+  }
+  &__title{
+    
+  }
+  &__copy{
+    margin-top:18px;
+  }
+  &__cta-btn{
+    margin-top:36px;
+  }
+  
+}

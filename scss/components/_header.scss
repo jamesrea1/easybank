@@ -1,0 +1,33 @@
+/**
+ * components/header
+ * ====================
+ */
+
+.header{
+    display: block;
+    padding:0 22px; 
+
+    &__mobile-wrap{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height:50px;  // MEDIA QUERY LG > 60px
+    }
+    &__logo{
+        width:139px;
+        height:20px; 
+    }
+    &__nav-toggle{
+        width: 32px;
+        height: 32px;
+    }
+    &__site-nav{
+        position:relative;         
+        z-index:10;
+    }
+    &__cta-btn{
+        display: none;
+    }
+ }
+
+
