@@ -1,6 +1,6 @@
 /**
  * components/cta-btn
- * ====================
+ * ==================
  */
 
  .cta-btn{
@@ -16,6 +16,10 @@
         background:linear-gradient(to right, 
                                    darken($color-lime-green, 10%), 
                                    darken($color-bright-cyan, 10%));
+    }
+    &:focus{
+        outline:none;
+        box-shadow: 0 0 0 5px rgba($color-bright-cyan,.3) ;
     }
     &--is-hidden{
         display:none;

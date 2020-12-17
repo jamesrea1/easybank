@@ -1,10 +1,19 @@
-// index for components
+/**
+ * index for components
+ * ====================
+ */
 
+@import 'article-card';
+@import 'card-grid';
 @import 'container';
+@import 'content';
+@import 'cta-btn';
+@import 'feature-card';
+@import 'features';
+@import 'footer';
 @import 'header';
+@import 'hero';
 @import 'logo';
 @import 'nav-toggle';
-@import 'site-nav';
-@import 'cta-btn';
-@import 'hero';
 @import 'overlay';
+@import 'site-nav';

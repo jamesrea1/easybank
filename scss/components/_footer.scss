@@ -1,0 +1,40 @@
+/**
+ * components/footer
+ * ==================
+ */
+
+ .footer{
+    text-align:center;
+    padding: 40px $content-space-x-xs 48px;
+
+    &__logo{
+        width:139px;
+        height:20px; 
+        margin:0 auto;
+    }
+    &__social{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:32px;
+    }
+    &__social-link{
+        display:inline-block;
+        width:24px;
+        height:24px;
+        margin:0 8px;
+    }
+    &__social-link > svg{
+        display:block;
+    }
+        &__site-nav{
+        margin-top:24px;
+    }
+    &__cta-btn{
+        margin-top:16px;
+    }
+    &__legal{
+        margin-top:24px;
+    }
+
+ }

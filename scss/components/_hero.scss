@@ -33,17 +33,17 @@
   }
 
   &__content{
-    margin:0 20px;
+    padding:0 $content-space-x-xs;
     text-align:center;
   }
   &__title{
     
   }
   &__copy{
-    margin-top:18px;
+    margin-top:16px;
   }
   &__cta-btn{
-    margin-top:36px;
+    margin-top:32px;
   }
   
 }

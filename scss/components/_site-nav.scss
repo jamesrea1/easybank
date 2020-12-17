@@ -4,15 +4,20 @@
  */
 
  .site-nav{
+    display:none;
     position:absolute;
     top:22px;
     width:100%;
     border-radius:5px;
     background-color: #fff;  
-    display:none;
 
     &--is-visible{
         display:block;
+    }
+    &--footer{
+        position:static;
+        display:block;
+        background-color: inherit;  
     }
 
     &__list{
@@ -29,9 +34,14 @@
         font-size:18px;
         color:#222;
         text-decoration:none;
-
+        
         &:hover{
             text-decoration:underline;
+        }
+        &--footer{
+            padding:6px 0;
+            font-size:14px;
+            color:$color-light-grayish-blue;
         }
     }
 

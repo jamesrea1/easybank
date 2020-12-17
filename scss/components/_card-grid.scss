@@ -1,0 +1,16 @@
+/**
+ * components/card-grid
+ * ====================
+ */
+
+.card-grid{
+    display:grid;
+
+    &--gap{
+        grid-row-gap:24px;
+    }
+    
+    &__item{ 
+        
+    }
+}

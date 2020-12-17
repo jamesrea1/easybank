@@ -1,6 +1,6 @@
 /**
  * abstracts/variables
- * ===============
+ * ===================
  */
 
 
@@ -8,20 +8,23 @@
 $color-dark-blue: #2d314d;
 $color-lime-green: hsl(136, 65%, 51%);
 $color-bright-cyan: hsl(192, 70%, 51%);
-$color-grayish-blue: hsl(233, 8%, 62%);
+$color-grayish-blue: #9698a6;
 $color-light-grayish-blue: hsl(220, 16%, 96%);
 $color-very-light-gray: hsl(0, 0%, 98%);
 $color-white: hsl(0, 0%, 100%);
 
 
-// font variables
+// Font family variables
 $font-family-base: 'Public Sans', sans-serif;
 $font-family-secondary: serif;
 
 
-// font size variables
-$font-size-xs: .75rem;
-$line-height-xs: 1rem;
+// Font size variables
+$font-size-xxs: .6rem;
+$line-height-xxs: 1rem;
+
+$font-size-xs: .84rem;
+$line-height-xs: 1.25rem;
 
 // $font-size-sm: .875rem;
 // $line-height-sm: 1.25rem;
@@ -32,8 +35,8 @@ $line-height-sm: 1.25rem;
 $font-size-base: 1rem;
 $line-height-base: 1.5rem;
 
-$font-size-lg: 1.125rem;
-$line-height-lg: 1.75rem;
+$font-size-lg: 1.1rem;
+$line-height-lg: 1.35rem;
 
 $font-size-xl: 1.25rem;
 $line-height-xl: 1.75rem;
@@ -63,17 +66,11 @@ $font-size-9xl: 8rem;
 $line-height-9xl: 1;
 
 
-
+// Letter spacing variables
 $letter-spacing-xs: -0.1em;
 $letter-spacing-sm: -0.03em;
 $letter-spacing-base: 0;
 $letter-spacing-lg: 0.1em;
-
-
-
-
-
-// EXAMPLES........
 
 
 // Spacing variables
@@ -81,4 +78,8 @@ $paragraph-space-xs: 15px;
 $paragraph-space-md: 20px;
 $paragraph-space-lg: 35px;
 
+
+// Content padding
+$content-space-x-xs: 24px;
+$content-space-y-xs: 56px;
 

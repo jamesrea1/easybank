@@ -1,0 +1,21 @@
+/**
+ * components/feature-card
+ * ===============
+ */
+
+.feature-card{
+    padding:16px 0;
+    // @include d-bg;
+
+    &__icon{
+        width:72px;
+        height:72px;
+        margin:0 auto;
+    }
+    &__title{
+        margin-top:24px;
+    }
+    &__copy{
+        margin-top:20px;
+    }
+}

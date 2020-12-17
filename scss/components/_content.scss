@@ -1,0 +1,19 @@
+/**
+ * components/content
+ * ===================
+ */
+
+ .content{
+    text-align:center;
+    padding: $content-space-y-xs $content-space-x-xs;
+
+    &__intro-title{
+        // margin:40px 0;
+    } 
+    &__intro-copy{
+        margin-top:16px;
+    }
+    &__card-grid{
+        margin-top:40px;
+    }
+}

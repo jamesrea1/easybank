@@ -3,27 +3,12 @@
  * ===========
  */
 
- 
- /**
- * ??
- */
 
- @media (max-width:600px){
-    body{
-        
-    }
-}
 body{
-    // width: 100%;
-    
+    min-width: 200px;
 }
 
-
-/**
- * button reset
- */
-
- button {
+button {
     display: inline-block;
     border: none;
     background:none;

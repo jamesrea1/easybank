@@ -4,21 +4,25 @@
  */
 
 .container{
-    @include d-border(red);
+    // @include d-border(red);
     
     position:relative;
-    background: $color-white;
+    background-color: $color-white;
 
-    //psuedo
-    //nested
-    //@media
-      
     &__inner{
-        
-    }
 
+    }
     &--header{
         z-index:10;
+    }
+    &--light{
+        background-color: $color-light-grayish-blue;
+    }
+    &--very-light{
+        background-color: $color-very-light-gray;
+    }
+    &--dark{
+        background-color: $color-dark-blue;
     }
 
 }
