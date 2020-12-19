@@ -1,0 +1,28 @@
+/**
+ * components/secondary-nav
+ * ====================
+ */
+
+.secondary-nav{
+
+    &__list{
+        list-style: none outside;
+        margin:0;
+        padding:0;
+    }
+    &__item{
+        padding:4px 0;
+    }
+    &__link{ 
+        margin:0;
+        padding:0;
+        font-size:$font-size-sm;
+        
+        color:$color-light-grayish-blue;
+        text-decoration: none;
+    }
+}
+ 
+
+
+

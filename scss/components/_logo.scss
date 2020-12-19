@@ -4,5 +4,12 @@
  */
 
  .logo{
-     
+    &__link{
+        display:inline-block;
+        width: 100%;
+        height: 100px;
+        svg{
+            display:inline-block;
+        }
+    }
  }

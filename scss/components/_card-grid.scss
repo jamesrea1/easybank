@@ -5,12 +5,17 @@
 
 .card-grid{
     display:grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
 
     &--gap{
-        grid-row-gap:24px;
+        grid-gap:24px;
     }
-    
     &__item{ 
         
+    }
+
+    @include bp($sm){
+        grid-template-columns: 1fr 1fr;
     }
 }

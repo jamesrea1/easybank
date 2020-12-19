@@ -4,34 +4,29 @@
  */
 
 .hero{
-  background: $color-very-light-gray;
-  padding-bottom:80px;
   max-width: 800px;
+  padding-bottom:80px;
   
   &__image-wrap{
-    background: url(../../images/bg-intro-mobile.svg)
-                right bottom / cover
-                no-repeat;
-    margin-bottom:32px;
-    overflow:hidden;
-    
-    // @include d-bg;
     display:flex; 
     justify-content: space-around;
     height:40vh;
     min-height:200px;
+    margin-bottom:32px;
+    overflow:hidden;
+    background: url(../../images/bg-intro-mobile.svg)
+                right bottom / cover
+                no-repeat;
   }
   &__image{
-    // @include d-border;    
     height: 150%;
     transform: translatey(-34%);    
     img{
+      display: block;
       width: auto;
       height: 100%;
-      display: block;
     }
   }
-
   &__content{
     padding:0 $content-space-x-xs;
     text-align:center;

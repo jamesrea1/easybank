@@ -1,49 +1,91 @@
 /**
  * components/site-nav
- * ====================
+ * ===================
  */
 
  .site-nav{
-    display:none;
-    position:absolute;
-    top:22px;
-    width:100%;
-    border-radius:5px;
+    display: none;
+    position: absolute;
+    top: 22px;
+    width: 100%;
+
+    position: relative;         
+    z-index: 10;
+
+    border-radius: 5px;
     background-color: #fff;  
 
     &--is-visible{
-        display:block;
+        display: block;
     }
-    &--footer{
-        position:static;
-        display:block;
-        background-color: inherit;  
-    }
-
     &__list{
         list-style: none outside;
-        margin:14px 0;
-        padding:0;
+        margin: 0 0;
+        padding: 14px 0;
     }
     &__item{
+
     }
     &__link{
-        display:block;
-        padding:10px 0;
-        text-align:center;
-        font-size:18px;
-        color:#222;
-        text-decoration:none;
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 18px;
+        color: $color-dark-blue;
+        text-decoration: none;
         
         &:hover{
-            text-decoration:underline;
-        }
-        &--footer{
-            padding:6px 0;
-            font-size:14px;
-            color:$color-light-grayish-blue;
+            text-decoration: underline;
         }
     }
+}
 
-    
+@include bp($lg){
+    .site-nav{
+        position: static;
+        display: flex;
+        align-items: stretch;
+        width: auto;
+        border-radius: 0;
+        background-color: none;  
+
+        &__list{
+            display: flex;
+            align-items: stretch;
+            margin: 0;
+            padding: 0;
+        }
+        &__item{
+            display: flex;
+            align-items: stretch;
+            height: 100%;
+        }
+        &__link{
+            position:relative;
+            display: flex;
+            align-items: center;
+            margin: 0 16px;
+            padding: 0 5px;
+            text-align:center;
+            font-size: $font-size-sm;
+            color: $color-grayish-blue;
+            box-sizing: border-box;
+        
+            &:hover{
+                text-decoration: none;
+                color: $color-dark-blue;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left:0;
+                    right:0;
+                    height: 5px;
+                    width: 100%;
+                    background-image: linear-gradient(45deg, #33D35E, #2AB6D9);
+                }
+            }
+        }
+    }
 }

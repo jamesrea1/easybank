@@ -1,0 +1,66 @@
+/**
+ * components/site-nav
+ * ====================
+ */
+
+ .site-nav{
+    display:none;
+    position:absolute;
+    top:22px;
+    width:100%;
+    border-radius:5px;
+    background-color: #fff;  
+
+    @include bp($lg){
+        display: block;
+        position: static;
+        height:100%;
+    }
+
+    &--is-visible{
+        display:block;
+    }
+
+
+    &__list{
+        list-style: none outside;
+        margin:14px 0;
+        padding:0;
+
+        @include bp($lg){
+            display: flex;
+        }
+    }
+    &__item{
+        @include bp($lg){
+            height:100%;
+        }
+    }
+    &__link{
+        display:block;
+        padding:10px 0;
+        text-align:center;
+        font-size:18px;
+        color: $color-dark-blue;
+        text-decoration:none;
+        
+        @include bp($lg){
+            @include d-border;
+            margin:0 10px;
+            font-size: $font-size-sm;
+            color: $color-grayish-blue;
+        }
+
+        &:hover{
+            text-decoration:underline;
+
+            @include bp($lg){
+                text-decoration:none;
+            }
+        }
+
+
+    }
+
+    
+}

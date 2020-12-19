@@ -4,24 +4,22 @@
  */
 
  .cta-btn{
-    display:inline-block;
+    display: inline-block;
+    padding: 0.72em 2.3em;
     border-radius: 2em;
-    background:linear-gradient(to right, $color-lime-green, $color-bright-cyan); 
-    color:$color-white;
+    background: linear-gradient(to right, $color-lime-green, $color-bright-cyan); 
+    font-size: $font-size-sm;
+    color: $color-white;
     text-decoration: none;
-    font-size:$font-size-sm;
-    padding:0.72em 2.3em;
 
     &:hover{
-        background:linear-gradient(to right, 
+        background: linear-gradient(to right, 
                                    darken($color-lime-green, 10%), 
                                    darken($color-bright-cyan, 10%));
     }
     &:focus{
         outline:none;
-        box-shadow: 0 0 0 5px rgba($color-bright-cyan,.3) ;
+        box-shadow: 0 0 0 5px rgba($color-bright-cyan,.3);
     }
-    &--is-hidden{
-        display:none;
-    }
+
 }
