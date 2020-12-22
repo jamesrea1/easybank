@@ -62,25 +62,25 @@
             height: 100%;
         }
         &__link{
-            position:relative;
+            position: relative;
             display: flex;
             align-items: center;
             margin: 0 16px;
             padding: 0 5px;
-            text-align:center;
+            text-align: center;
             font-size: $font-size-sm;
             color: $color-grayish-blue;
             box-sizing: border-box;
         
             &:hover{
-                text-decoration: none;
                 color: $color-dark-blue;
+                text-decoration: none;
                 &::after{
                     content: "";
                     position: absolute;
+                    right: 0;
                     bottom: 0;
-                    left:0;
-                    right:0;
+                    left: 0;
                     height: 5px;
                     width: 100%;
                     background-image: linear-gradient(45deg, #33D35E, #2AB6D9);

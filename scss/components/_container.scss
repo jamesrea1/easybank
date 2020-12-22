@@ -4,14 +4,11 @@
  */
 
 .container{
-    position:relative;
+    position: relative;
     background-color: $color-white;
 
-    &__inner{
-
-    }
     &--header{
-        z-index:10;
+        z-index: 10;
     }
     &--light{
         background-color: $color-light-grayish-blue;
@@ -21,6 +18,13 @@
     }
     &--dark{
         background-color: $color-dark-blue;
+    }
+    
+    &__inner{
+        // @include d_border;
+
+        max-width: $content-max-width;
+        margin: 0 auto;
     }
 
 }

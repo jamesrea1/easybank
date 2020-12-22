@@ -1,19 +1,16 @@
 /**
  * components/hero
- * ====================
+ * ===============
  */
 
 .hero{
-  max-width: 800px;
-  padding-bottom:80px;
   
   &__image-wrap{
-    display:flex; 
-    justify-content: space-around;
-    height:40vh;
-    min-height:200px;
-    margin-bottom:32px;
-    overflow:hidden;
+    display: flex; 
+    justify-content: center;
+    height: 40vh;
+    min-height: 200px;
+    overflow: hidden;
     background: url(../../images/bg-intro-mobile.svg)
                 right bottom / cover
                 no-repeat;
@@ -28,17 +25,78 @@
     }
   }
   &__content{
-    padding:0 $content-space-x-xs;
-    text-align:center;
+    padding-top: 32px; //calc(1px + 10vh); 
+    padding-right: $content-space-x-xs;
+    padding-bottom: 80px; //calc(1px + 10vh); 
+    padding-left: $content-space-x-xs;
+    text-align: center;
   }
   &__title{
     
   }
   &__copy{
-    margin-top:16px;
+    margin-top: 16px;
   }
   &__cta-btn{
-    margin-top:32px;
+    margin-top: 32px;
   }
-  
+}
+
+@include bp($lg){
+  .hero{
+    height:650px;
+
+    &__image-wrap{
+      display: block;            //flex
+      justify-content: unset;   //center
+      height: auto;             //40vh
+      min-height: auto;         //200px
+      overflow: visible;           //hidden
+      
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 50%;
+
+      background: url(../../images/bg-intro-desktop.svg)
+                  left 0% bottom 0% / auto 135%
+                  no-repeat;
+    }
+    &__image{
+      height: auto;
+      width: auto;
+      transform: translatey(-14%) translatex(100px);    
+      
+      img{
+        display: block;
+      }
+    }
+
+    &__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 40%;
+      height: 100%;
+      padding: 0;
+      text-align: left;
+    }
+    &__title{
+      font-size: 56px;
+      font-weight: 300;
+      line-height: 1.2em;
+    }
+    &__copy{
+      margin-top: 24px;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.6em;
+    }
+    &__cta-btn{
+      margin-top: 40px;
+    }    
+
+  }
 }

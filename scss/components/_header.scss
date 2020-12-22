@@ -36,6 +36,7 @@
         justify-content: space-between;
         align-items: stretch;
         height: 80px;
+        padding:0;
 
         &__mobile-wrap{
 
@@ -44,14 +45,9 @@
             
         }
         &__nav-toggle{
-            display:none;
+            display: none;
         }        
         &__site-nav{
-            // position: static;         
-            // z-index: auto;
-            // width: auto;
-            // height: auto;
-            // position: static;
             display: flex;
             align-items: stretch;            
         }
