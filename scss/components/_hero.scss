@@ -17,7 +17,8 @@
   }
   &__image{
     height: 150%;
-    transform: translatey(-34%);    
+    transform: translatey(-34%);  
+
     img{
       display: block;
       width: auto;
@@ -25,10 +26,10 @@
     }
   }
   &__content{
-    padding-top: 32px; //calc(1px + 10vh); 
-    padding-right: $content-space-x-xs;
-    padding-bottom: 80px; //calc(1px + 10vh); 
-    padding-left: $content-space-x-xs;
+    padding-top: $content-space-32; //calc(1px + 10vh); 
+    padding-bottom: $content-space-80; //calc(1px + 10vh); 
+    padding-left: $content-space-24;
+    padding-right: $content-space-24;
     text-align: center;
   }
   &__title{
@@ -80,7 +81,10 @@
       justify-content: center;
       width: 40%;
       height: 100%;
-      padding: 0;
+      padding-top: $content-space-0; //calc(1px + 10vh); 
+      padding-bottom: $content-space-0; //calc(1px + 10vh); 
+      padding-left: $content-space-0;
+      padding-right: $content-space-0;
       text-align: left;
     }
     &__title{

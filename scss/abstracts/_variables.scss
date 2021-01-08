@@ -24,7 +24,7 @@ $font-size-xxs: .6rem;
 $line-height-xxs: 1rem;
 
 $font-size-xs: .84rem;
-$line-height-xs: 1.25rem;
+$line-height-xs: 1.2rem;
 
 // $font-size-sm: .875rem;
 // $line-height-sm: 1.25rem;
@@ -79,9 +79,23 @@ $paragraph-space-md: 20px;
 $paragraph-space-lg: 35px;
 
 
+
+// $content-space-x-0: 0;
+// $content-space-x-xs: 24px;
+// $content-space-y-xs: 56px;
+
+
 // Content padding variables
-$content-space-x-xs: 24px;
-$content-space-y-xs: 56px;
+$content-space-0: 0;
+$content-space-24: 24px;
+$content-space-32: 32px;
+$content-space-40: 40px;
+$content-space-48: 48px;
+$content-space-56: 56px;
+$content-space-80: 80px;
+$content-space-100: 100px;
+
+
 
 
 // Content size variables

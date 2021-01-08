@@ -4,9 +4,12 @@
  */
 
  .footer{
-    text-align:center;
-    padding: 40px $content-space-x-xs 48px;
-
+     padding-top: $content-space-40;
+     padding-bottom: $content-space-48;
+     padding-left: $content-space-24;
+     padding-right: $content-space-24;
+     text-align:center;
+     
     &__logo{
         width:139px;
         height:20px; 
@@ -39,4 +42,57 @@
         margin-top:24px;
     }
 
+ }
+
+ @include bp($lg){
+     .footer{
+        display: grid;
+        grid-template-columns: 1fr 1.2fr 1.5fr; 
+        // grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: "logo   nav cta"
+                             "social nav legal";
+    
+
+        &__logo{
+            margin:0; margin-top:10px;
+            grid-area: logo;
+            align-self: start;
+            justify-self: start;
+        }
+        &__social{
+            grid-area: social;
+            margin-top: 0; margin-bottom:8px;
+            align-self: end;
+            justify-self: start;
+        }
+        &__social-link
+        {
+            width:20px;
+            height:20px;
+            margin:0 7px;
+        }
+        &__social-link:first-child{
+            margin-left:0;
+        }
+        &__nav{
+            grid-area: nav;
+            margin-top:0px;
+            align-self: stretch;
+            justify-self: stretch;
+        }
+        &__cta-btn{
+            grid-area: cta;
+            margin:0; margin-top:10px;
+            align-self: start;
+            justify-self: end;
+        }
+        &__legal{
+            grid-area: legal;
+            margin-top:0px; margin-bottom:4px;
+            align-self: end;
+            justify-self: end;
+
+        }
+
+     }
  }

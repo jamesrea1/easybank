@@ -4,8 +4,7 @@
  */
 
 .feature-card{
-    padding:16px 0;
-    // @include d-bg;
+    padding:0;
 
     &__icon{
         width:72px;
@@ -17,5 +16,20 @@
     }
     &__copy{
         margin-top:20px;
+    }
+
+    @include bp($lg){
+        &__icon{
+            margin:0;
+        }
+        &__title{
+            margin-top:40px;
+            font-size: 24px;
+        }
+        &__copy{
+            margin-top:26px;
+            font-size: 16px;
+            line-height:26px;
+        }  
     }
 }

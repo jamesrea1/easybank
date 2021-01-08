@@ -25,6 +25,10 @@
 
         max-width: $content-max-width;
         margin: 0 auto;
+
+        @include bp($lg){
+            padding:0 40px;
+        }
     }
 
 }

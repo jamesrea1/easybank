@@ -6,20 +6,31 @@
 .secondary-nav{
 
     &__list{
+        margin: 0;
+        padding: 0;
         list-style: none outside;
-        margin:0;
-        padding:0;
     }
     &__item{
-        padding:4px 0;
+        padding: 4px 0;
     }
     &__link{ 
-        margin:0;
-        padding:0;
-        font-size:$font-size-sm;
-        
-        color:$color-light-grayish-blue;
+        margin: 0;
+        padding: 0;
+        font-size: $font-size-sm;
+        color: $color-light-grayish-blue;
         text-decoration: none;
+    }
+}
+
+@include bp($lg){
+    .secondary-nav{
+        column-count: 2;
+        text-align:left;
+
+        &__item{
+            padding: 6px 0;
+        }
+    
     }
 }
  
