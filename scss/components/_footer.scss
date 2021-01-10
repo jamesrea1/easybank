@@ -26,6 +26,11 @@
         width:24px;
         height:24px;
         margin:0 8px;
+
+        &:hover path{
+            transition: fill 0.2s;
+            fill: $color-lime-green;
+        }
     }
     &__social-link > svg{
         display:block;

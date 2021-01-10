@@ -4,24 +4,30 @@
  */
 
  .site-nav{
-    display: none;
-    position: absolute;
+    $transition-time: 0.3s;
+    
+    visibility: hidden;
+    position: relative;         
     top: 22px;
     width: 100%;
-
-    position: relative;         
     z-index: 10;
-
+    opacity:0;
     border-radius: 5px;
     background-color: #fff;  
-
+    transition: visibility 0s ease $transition-time, opacity $transition-time;
+    
+    /*
+     * Can't animate 'display' - using 'visibility' instead
+     */
     &--is-visible{
-        display: block;
+        visibility: visible;
+        opacity:1;
+        transition: opacity $transition-time;
     }
     &__list{
-        list-style: none outside;
         margin: 0 0;
         padding: 14px 0;
+        list-style: none outside;
     }
     &__item{
 
@@ -30,25 +36,33 @@
         display: block;
         margin: 0;
         padding: 10px 0;
-        text-align: center;
         font-size: 18px;
         color: $color-dark-blue;
+        text-align: center;
         text-decoration: none;
+
+        // TODO
+        transition:all 1s;
         
         &:hover{
-            text-decoration: underline;
+            background-image: linear-gradient(45deg, $color-lime-green, $color-bright-cyan);
+            color:white;
+            text-decoration: none;
         }
     }
 }
 
 @include bp($lg){
     .site-nav{
-        position: static;
         display: flex;
+        visibility: visible;
+        opacity: 1;
         align-items: stretch;
+        position: static;
         width: auto;
         border-radius: 0;
         background-color: none;  
+        transition: none;
 
         &__list{
             display: flex;
@@ -61,29 +75,47 @@
             align-items: stretch;
             height: 100%;
         }
+
         &__link{
-            position: relative;
             display: flex;
             align-items: center;
-            margin: 0 16px;
-            padding: 0 5px;
-            text-align: center;
+            position: relative;
+            box-sizing: border-box;
+            margin: 0 13px;
+            padding: 0 8px;
             font-size: $font-size-sm;
             color: $color-grayish-blue;
-            box-sizing: border-box;
+            text-align: center;
+            transition:color 0.3s;
+
+            /*
+             * allows a color gradient to be used in the hover state bottom border (can't
+             */
+            &::after{
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                border-radius: 2px 2px 0 0;
+                background-image: linear-gradient(45deg, $color-lime-green, $color-bright-cyan);
+                transform: scaleY(0);
+                transform-origin: bottom;
+                // transition:width 0.2s;
+                transition: transform 0.3s ease 0.1s;
+            }
         
             &:hover{
+                background-image: none;
                 color: $color-dark-blue;
                 text-decoration: none;
+            
                 &::after{
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    height: 5px;
                     width: 100%;
-                    background-image: linear-gradient(45deg, #33D35E, #2AB6D9);
+                    transform: scaleY(1);
+                    transition: transform 0.05s ease 0s;
                 }
             }
         }

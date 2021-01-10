@@ -417,14 +417,32 @@ p {
  */
 .cta-btn {
   display: inline-block;
+  position: relative;
+  z-index: 1;
   padding: 0.72em 2.3em;
   border-radius: 2em;
   background: linear-gradient(to right, #31d35c, #2bb7da);
   font-size: 0.9rem;
   color: white;
-  text-decoration: none; }
-  .cta-btn:hover {
-    background: linear-gradient(to right, #25ad49, #1f94b2); }
+  text-decoration: none;
+  transition: all 1s;
+  /*
+     * allows gradient background to be animated
+     */ }
+  .cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 2em;
+    background: linear-gradient(to right, #25ad49, #1f94b2);
+    opacity: 0;
+    transition: opacity 0.3s linear; }
+  .cta-btn:hover::before {
+    opacity: 1; }
   .cta-btn:focus {
     outline: none;
     box-shadow: 0 0 0 5px rgba(43, 183, 218, 0.3); }
@@ -482,6 +500,9 @@ p {
     width: 24px;
     height: 24px;
     margin: 0 8px; }
+    .footer__social-link:hover path {
+      transition: fill 0.2s;
+      fill: #31d35c; }
   .footer__social-link > svg {
     display: block; }
   .footer__nav {
@@ -628,7 +649,7 @@ p {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 40%;
+      width: 45%;
       height: 100%;
       padding-top: 0;
       padding-bottom: 0;
@@ -712,6 +733,8 @@ p {
   font-size: 0.9rem;
   color: #f3f4f6;
   text-decoration: none; }
+  .secondary-nav__link:hover {
+    color: #31d35c; }
 
 @media (min-width: 1024px) {
   .secondary-nav {
@@ -725,39 +748,51 @@ p {
  * ===================
  */
 .site-nav {
-  display: none;
-  position: absolute;
+  visibility: hidden;
+  position: relative;
   top: 22px;
   width: 100%;
-  position: relative;
   z-index: 10;
+  opacity: 0;
   border-radius: 5px;
-  background-color: #fff; }
+  background-color: #fff;
+  transition: visibility 0s ease 0.3s, opacity 0.3s;
+  /*
+     * Can't animate 'display' - using 'visibility' instead
+     */ }
   .site-nav--is-visible {
-    display: block; }
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s; }
   .site-nav__list {
-    list-style: none outside;
     margin: 0 0;
-    padding: 14px 0; }
+    padding: 14px 0;
+    list-style: none outside; }
   .site-nav__link {
     display: block;
     margin: 0;
     padding: 10px 0;
-    text-align: center;
     font-size: 18px;
     color: #2d314d;
-    text-decoration: none; }
+    text-align: center;
+    text-decoration: none;
+    transition: all 1s; }
     .site-nav__link:hover {
-      text-decoration: underline; }
+      background-image: linear-gradient(45deg, #31d35c, #2bb7da);
+      color: white;
+      text-decoration: none; }
 
 @media (min-width: 1024px) {
   .site-nav {
-    position: static;
     display: flex;
+    visibility: visible;
+    opacity: 1;
     align-items: stretch;
+    position: static;
     width: auto;
     border-radius: 0;
-    background-color: none; }
+    background-color: none;
+    transition: none; }
     .site-nav__list {
       display: flex;
       align-items: stretch;
@@ -768,27 +803,40 @@ p {
       align-items: stretch;
       height: 100%; }
     .site-nav__link {
-      position: relative;
       display: flex;
       align-items: center;
-      margin: 0 16px;
-      padding: 0 5px;
-      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      margin: 0 13px;
+      padding: 0 8px;
       font-size: 0.9rem;
       color: #9698a6;
-      box-sizing: border-box; }
+      text-align: center;
+      transition: color 0.3s;
+      /*
+             * allows a color gradient to be used in the hover state bottom border
+             */ }
+      .site-nav__link::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 2px 2px 0 0;
+        background-image: linear-gradient(45deg, #31d35c, #2bb7da);
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.3s ease 0.1s; }
       .site-nav__link:hover {
+        background-image: none;
         color: #2d314d;
         text-decoration: none; }
         .site-nav__link:hover::after {
-          content: "";
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          height: 5px;
           width: 100%;
-          background-image: linear-gradient(45deg, #33D35E, #2AB6D9); } }
+          transform: scaleY(1);
+          transition: transform 0.05s ease 0s; } }
 
 /**
  * utilities/utilities

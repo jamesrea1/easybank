@@ -4,19 +4,45 @@
  */
 
  .cta-btn{
+    $radius: 2em;
+    
     display: inline-block;
+    position: relative;
+    z-index: 1;
     padding: 0.72em 2.3em;
-    border-radius: 2em;
-    background: linear-gradient(to right, $color-lime-green, $color-bright-cyan); 
+    border-radius: $radius;
+    background: linear-gradient(to right, 
+                                $color-lime-green, 
+                                $color-bright-cyan); 
     font-size: $font-size-sm;
     color: $color-white;
     text-decoration: none;
+    transition: all 1s;
 
-    &:hover{
+    /*
+     * allows gradient background to be animated
+     */
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: $radius;
         background: linear-gradient(to right, 
-                                   darken($color-lime-green, 10%), 
-                                   darken($color-bright-cyan, 10%));
+                                    darken($color-lime-green, 10%), 
+                                    darken($color-bright-cyan, 10%));
+
+        opacity: 0;
+        transition: opacity 0.3s linear;
     }
+
+    &:hover::before {
+        opacity: 1;
+    }
+
     &:focus{
         outline:none;
         box-shadow: 0 0 0 5px rgba($color-bright-cyan,.3);
