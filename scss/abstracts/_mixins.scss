@@ -19,8 +19,8 @@
   }
 }
 
-// @mixin until($device-width) {
-//   @media screen and (max-width: $device-width - 1) {
-//     @content 
-//   }
-// }
+@mixin bp-max($device-width) {
+  @media (max-width: $device-width - 1) {
+    @content 
+  }
+}

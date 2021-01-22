@@ -9,7 +9,8 @@
     display: flex; 
     justify-content: center;
     height: 40vh;
-    min-height: 200px;
+    min-height: 250px;
+    max-height: 400px;
     overflow: hidden;
     background: url(../../images/bg-intro-mobile.svg)
                 right bottom / cover
@@ -28,45 +29,46 @@
   &__content{
     padding-top: $content-space-32; //calc(1px + 10vh); 
     padding-bottom: $content-space-80; //calc(1px + 10vh); 
-    padding-left: $content-space-24;
-    padding-right: $content-space-24;
+    padding-left: 10%;
+    padding-right: 10%;
     text-align: center;
   }
   &__title{
-    
+    font-size: $font-size-5xl;
+    line-height: $line-height-5xl;
   }
   &__copy{
-    margin-top: 16px;
+    margin-top: $content-space-16;
   }
   &__cta-btn{
-    margin-top: 32px;
+    margin-top: $content-space-32;
   }
 }
 
 @include bp($lg){
   .hero{
-    height:650px;
+    height: 550px;
 
     &__image-wrap{
       display: block;            //flex
       justify-content: unset;   //center
       height: auto;             //40vh
       min-height: auto;         //200px
+      max-height: 100%;         //200px
+
       overflow: visible;           //hidden
-      
       position: absolute;
       z-index: 1;
       top: 0;
       left: 50%;
       bottom: 0;
       width: 50%;
-
       background: url(../../images/bg-intro-desktop.svg)
                   left 0% bottom 0% / auto 135%
                   no-repeat;
     }
     &__image{
-      height: auto;
+      height: 760px;
       width: auto;
       transform: translatey(-14%) translatex(100px);    
       
@@ -74,7 +76,6 @@
         display: block;
       }
     }
-
     &__content{
       display: flex;
       flex-direction: column;
@@ -88,19 +89,38 @@
       text-align: left;
     }
     &__title{
-      font-size: 56px;
+      font-size: 3.5em;
       font-weight: 300;
-      line-height: 1.2em;
+      line-height: 1.18em;
     }
     &__copy{
-      margin-top: 24px;
-      font-size: 18px;
+      margin-top: 20px;
+      font-size: 17px;
       font-weight: 300;
-      line-height: 1.6em;
+      line-height: 1.5em;
     }
     &__cta-btn{
       margin-top: 40px;
     }    
+  }
+}
 
+@include bp($xl){
+  .hero{
+    height: 650px;
+
+    &__image{
+      height: auto;
+    }
+    &__title{
+      font-size: 4em;
+      line-height: 1.2em;
+    }
+    &__copy{
+      margin-top: $content-space-24;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.6em;
+    }
   }
 }

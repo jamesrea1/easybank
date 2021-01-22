@@ -7,8 +7,11 @@
     position: relative;
     background-color: $color-white;
 
+    // border:10px solid red;
+
     &--header{
         z-index: 10;
+        box-shadow: 0 0 5px -3px #999;
     }
     &--light{
         background-color: $color-light-grayish-blue;
@@ -26,6 +29,9 @@
         max-width: $content-max-width;
         margin: 0 auto;
 
+        @include bp($md){
+            padding:0;
+        }
         @include bp($lg){
             padding:0 40px;
         }

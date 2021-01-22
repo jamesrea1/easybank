@@ -15,7 +15,7 @@
     }
     &__logo{
         width: 139px;
-        height: 20px; 
+        height: 22px; 
     }
     &__nav-toggle{
         width: 32px;
@@ -30,13 +30,13 @@
     }
 }
 
-@include bp($lg){
+@include bp($md){
     .header{
         display: flex;
         justify-content: space-between;
         align-items: stretch;
-        height: 80px;
-        padding: 0;
+        height: 70px;
+        padding:  0 22px;
 
         &__mobile-wrap{
 
@@ -58,6 +58,10 @@
     }
 }
 
+@include bp($lg){
+    .header{
+        padding: 0;
+        height: 80px;      
+    }
 
-
-
+}

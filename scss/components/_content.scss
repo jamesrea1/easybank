@@ -6,38 +6,40 @@
  .content{
     padding-top: $content-space-56;
     padding-bottom: $content-space-56;
-    padding-left: $content-space-24;
-    padding-right: $content-space-24;
+    padding-left: 10%;
+    padding-right: 10%;
     text-align:center;
 
     &__intro-title{
-
+        font-size:32px;
     } 
     &__intro-copy{
-        margin-top:16px;
+        margin-top:20px;
+        max-width: 650px;
+        font-size: $font-size-sm;
+        line-height: $line-height-base;     
     }
     &__card-grid{
-        margin-top:40px;
+        margin-top:52px;
     }
 }
 
 @include bp($lg){
     .content{
-        padding-top: $content-space-100;
+        padding-top: $content-space-80;
         padding-bottom: $content-space-80;
         padding-left: $content-space-0;
         padding-right: $content-space-0;
         text-align:left;
 
         &__intro-title{
-            font-size:40px;
+            font-size:36px;
             font-weight:400;
         } 
         &__intro-copy{
-            width:650px;
-            margin-top:32px;
-            font-size:18px;
-            line-height:1.6em;
+            margin-top:28px;
+            font-size:16px;
+            line-height:1.65em;
         }
         &__card-grid{
             margin-top:70px;
@@ -45,6 +47,21 @@
             &--closer{
                 margin-top:55px;
             }
+        }
+    }
+}
+
+@include bp($xl){
+    .content{
+        padding-top: $content-space-100;
+
+        &__intro-title{
+            font-size:40px;
+        } 
+        &__intro-copy{
+            margin-top:32px;
+            font-size:18px;
+            line-height:1.6em;
         }
     }
 }

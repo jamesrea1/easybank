@@ -21,7 +21,7 @@
         display: block;
     }
 
-    @include bp($lg){
+    @include bp($xl){
         display:none;
     }
 

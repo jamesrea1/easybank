@@ -8,7 +8,7 @@
     
     display: inline-block;
     position: relative;
-    z-index: 1;
+    z-index: 0;  // parent with
     padding: 0.72em 2.3em;
     border-radius: $radius;
     background: linear-gradient(to right, 
@@ -17,10 +17,17 @@
     font-size: $font-size-sm;
     color: $color-white;
     text-decoration: none;
-    transition: all 1s;
 
     /*
-     * allows gradient background to be animated
+     * Gradients cannot be animated, but a psuedo element overlay with a different gradient background CAN be animated with opacity.
+     * How this technique works (overlay is between anchor element background and text):
+        > Parent is position:relative AND has a z-index value (not auto) and is therefore a new stacking context. 
+        > Psuedo 'child' is absolutely positioned and has a z-index of -1
+        > The parent forms a stacking context so every child will stack within of it (including children with negative z-index).
+        > IMPORTANT - the stacking order rules in a stacking context
+        > 1. Background and borders of parent establishing new stacking context
+        > 2. Children with negative z-index (the psuedo 'child')
+        > 3. All other children following usual stacking order rules
      */
     &::before {
         content: "";
@@ -46,6 +53,14 @@
     &:focus{
         outline:none;
         box-shadow: 0 0 0 5px rgba($color-bright-cyan,.3);
+    }
+
+    &--header{
+        @include bp-max($lg){
+            padding: 0.5em 1.8em;
+            font-size: $font-size-xs;
+
+        }
     }
 
 }

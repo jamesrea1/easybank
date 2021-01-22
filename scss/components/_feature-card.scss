@@ -4,7 +4,8 @@
  */
 
 .feature-card{
-    padding:0;
+    padding:0 0 0 0;
+    margin-bottom:22px;
 
     &__icon{
         width:72px;
@@ -13,15 +14,55 @@
     }
     &__title{
         margin-top:24px;
+        font-size: 20px;
     }
     &__copy{
-        margin-top:20px;
+        margin-top:16px;
+        font-size: $font-size-sm;
+        line-height: $line-height-base;
+    }
+
+    @include bp($sm){
+        &__title{
+            // margin-top:24px;
+            // font-size: 16px;
+        }
+        &__copy{
+            // margin-top:20px;
+            // font-size: 16px;
+            // line-height:26px;
+        }
+    }
+
+    @include bp($md){
+        &__title{
+            // margin-top:24px;
+            // font-size: 16px;
+        }
+        &__copy{
+            // margin-top:20px;
+            // font-size: 16px;
+            // line-height:26px;
+        }
     }
 
     @include bp($lg){
         &__icon{
-            margin:0;
+            margin-left:0;
         }
+        &__title{
+            margin-top:40px;
+            font-size: 24px;
+        }
+        &__copy{
+            margin-top:26px;
+            font-size: 16px;
+            line-height:26px;
+        }  
+    }
+
+    @include bp($xl){
+
         &__title{
             margin-top:40px;
             font-size: 24px;
