@@ -1,6 +1,6 @@
 /**
  * components/header
- * ====================
+ * =================
  */
 
 .header{
@@ -21,9 +21,7 @@
         width: 32px;
         height: 32px;
     }
-    &__site-nav{
-
-    }
+    //&__site-nav{    }
     &__cta-btn{
         display: none;
 
@@ -38,12 +36,6 @@
         height: 70px;
         padding:  0 22px;
 
-        &__mobile-wrap{
-
-        }
-        &__logo{
-            
-        }
         &__nav-toggle{
             display: none;
         }        
@@ -63,5 +55,4 @@
         padding: 0;
         height: 80px;      
     }
-
 }

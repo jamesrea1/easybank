@@ -7,8 +7,6 @@
     position: relative;
     background-color: $color-white;
 
-    // border:10px solid red;
-
     &--header{
         z-index: 10;
         box-shadow: 0 0 5px -3px #999;
@@ -24,8 +22,6 @@
     }
     
     &__inner{
-        // @include d_border;
-
         max-width: $content-max-width;
         margin: 0 auto;
 

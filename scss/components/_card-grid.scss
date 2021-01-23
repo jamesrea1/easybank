@@ -14,13 +14,6 @@
     }
 }
 
-// @include bp(450px){
-//     .card-grid{
-//         &--articles{
-//             // grid-template-columns: 1fr 1fr;
-//         }
-//     }
-// }
 @include bp($sm){
     .card-grid{
         grid-template-columns: 1fr 1fr;

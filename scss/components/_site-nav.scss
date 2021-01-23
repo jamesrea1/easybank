@@ -4,8 +4,8 @@
  */
 
  .site-nav{
-    $transition-time: 0.3s;
-    
+    $transition-time: 0.99s;
+
     visibility: hidden;
     position: relative;         
     top: 16px;
@@ -15,7 +15,6 @@
     border-radius: 5px;
     background-color: #fff;  
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    transition: visibility 0s ease $transition-time, opacity $transition-time;
     
     /*
      * Can't animate 'display' - using 'visibility' instead
@@ -23,7 +22,8 @@
     &--is-visible{
         visibility: visible;
         opacity:1;
-        transition: opacity $transition-time;
+        transition: visibility $transition-time, opacity $transition-time;
+
     }
     &__list{
         margin: 0 0;
@@ -41,10 +41,7 @@
         color: $color-dark-blue;
         text-align: center;
         text-decoration: none;
-
-        // TODO
-        transition:all 1s;
-        
+    
         &:hover{
             background-image: linear-gradient(45deg, $color-lime-green, $color-bright-cyan);
             color:white;
@@ -62,9 +59,12 @@
         position: static;
         width: auto;
         border-radius: 0;
-        background-color: none;  
+        background-color: transparent;  
         box-shadow:none;
         transition: none;
+
+        transform:translatey(0);
+
 
         &__list{
             display: flex;
@@ -88,10 +88,11 @@
             font-size: $font-size-xs;
             color: $color-grayish-blue;
             text-align: center;
-            transition:color 0.3s;
+            transition:color 0.3s; 
 
             /*
-             * allows a color gradient to be used in the hover state bottom border (can't
+             * allows a color gradient to be used in the hover state bottom border (can't use gradient on border)
+             * animate the psuedo element's transform on hover (can animate an element with gradient background's position and opacity - but not gradient color [I also use psuedo elements for animating a button's gradient background color by fading the psuedo element overlay with opacity])
              */
             &::after{
                 content: "";
@@ -105,7 +106,6 @@
                 background-image: linear-gradient(45deg, $color-lime-green, $color-bright-cyan);
                 transform: scaleY(0);
                 transform-origin: bottom;
-                // transition:width 0.2s;
                 transition: transform 0.3s ease 0.1s;
             }
         

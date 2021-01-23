@@ -323,7 +323,7 @@ p {
       height: 100%;
       object-fit: cover; }
   .article-card__content {
-    padding: 24px 28px 40px 28px;
+    padding: 8% 8% 14% 8%;
     text-align: left; }
   .article-card__author {
     font-size: 0.6rem;
@@ -497,7 +497,7 @@ p {
 
 /**
  * components/feature-card
- * ===============
+ * =======================
  */
 .feature-card {
   padding: 0 0 0 0;
@@ -615,7 +615,7 @@ p {
 
 /**
  * components/header
- * ====================
+ * =================
  */
 .header {
   padding: 0 22px;
@@ -666,7 +666,7 @@ p {
   min-height: 250px;
   max-height: 400px;
   overflow: hidden;
-  background: url(../../images/bg-intro-mobile.svg) right bottom/cover no-repeat; }
+  background: url(images/bg-intro-mobile.svg) right bottom/cover no-repeat; }
 
 .hero__image {
   height: 150%;
@@ -709,7 +709,7 @@ p {
       left: 50%;
       bottom: 0;
       width: 50%;
-      background: url(../../images/bg-intro-desktop.svg) left 0% bottom 0%/auto 135% no-repeat; }
+      background: url(../images/bg-intro-desktop.svg) left 0% bottom 0%/auto 135% no-repeat; }
     .hero__image {
       height: 760px;
       width: auto;
@@ -843,14 +843,13 @@ p {
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  transition: visibility 0s ease 0.3s, opacity 0.3s;
   /*
      * Can't animate 'display' - using 'visibility' instead
      */ }
   .site-nav--is-visible {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.3s; }
+    transition: visibility 0.99s, opacity 0.99s; }
   .site-nav__list {
     margin: 0 0;
     padding: 14px 0;
@@ -862,8 +861,7 @@ p {
     font-size: 18px;
     color: #2d314d;
     text-align: center;
-    text-decoration: none;
-    transition: all 1s; }
+    text-decoration: none; }
     .site-nav__link:hover {
       background-image: linear-gradient(45deg, #31d35c, #2bb7da);
       color: white;
@@ -878,9 +876,10 @@ p {
     position: static;
     width: auto;
     border-radius: 0;
-    background-color: none;
+    background-color: transparent;
     box-shadow: none;
-    transition: none; }
+    transition: none;
+    transform: translatey(0); }
     .site-nav__list {
       display: flex;
       align-items: stretch;
@@ -902,7 +901,8 @@ p {
       text-align: center;
       transition: color 0.3s;
       /*
-             * allows a color gradient to be used in the hover state bottom border (can't
+             * allows a color gradient to be used in the hover state bottom border (can't use gradient on border)
+             * animate the psuedo element's transform on hover (can animate an element with gradient background's position and opacity - but not gradient color [I also use psuedo elements for animating a button's gradient background color by fading the psuedo element overlay with opacity])
              */ }
       .site-nav__link::after {
         content: "";

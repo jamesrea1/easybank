@@ -1,6 +1,6 @@
 /**
  * components/feature-card
- * ===============
+ * =======================
  */
 
 .feature-card{
@@ -22,30 +22,6 @@
         line-height: $line-height-base;
     }
 
-    @include bp($sm){
-        &__title{
-            // margin-top:24px;
-            // font-size: 16px;
-        }
-        &__copy{
-            // margin-top:20px;
-            // font-size: 16px;
-            // line-height:26px;
-        }
-    }
-
-    @include bp($md){
-        &__title{
-            // margin-top:24px;
-            // font-size: 16px;
-        }
-        &__copy{
-            // margin-top:20px;
-            // font-size: 16px;
-            // line-height:26px;
-        }
-    }
-
     @include bp($lg){
         &__icon{
             margin-left:0;
@@ -62,7 +38,6 @@
     }
 
     @include bp($xl){
-
         &__title{
             margin-top:40px;
             font-size: 24px;

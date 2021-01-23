@@ -1,2 +1,5 @@
 node_modules
 *.code-workspace
+delete.html
+debug.log
+style-guide.md
