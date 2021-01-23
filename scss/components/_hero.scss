@@ -50,13 +50,12 @@
     height: 550px;
 
     &__image-wrap{
-      display: block;            //flex
-      justify-content: unset;   //center
-      height: auto;             //40vh
-      min-height: auto;         //200px
-      max-height: 100%;         //200px
-
-      overflow: visible;           //hidden
+      display: block;
+      justify-content: unset;
+      height: auto;
+      min-height: auto;
+      max-height: 100%;
+      overflow: visible;
       position: absolute;
       z-index: 1;
       top: 0;

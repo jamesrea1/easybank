@@ -4,7 +4,7 @@
  */
 
  .site-nav{
-    $transition-time: 0.99s;
+    $transition-time: 0.3s;
 
     visibility: hidden;
     position: relative;         
@@ -35,17 +35,35 @@
     }
     &__link{
         display: block;
+        position: relative;
+        z-index: 1;
         margin: 0;
         padding: 10px 0;
         font-size: 18px;
         color: $color-dark-blue;
         text-align: center;
         text-decoration: none;
-    
-        &:hover{
+        transition: color $transition-time;
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             background-image: linear-gradient(45deg, $color-lime-green, $color-bright-cyan);
+            opacity: 0;
+            transition: opacity $transition-time;
+        }
+        &:hover{
             color:white;
             text-decoration: none;
+        }
+        &:hover::before{
+            opacity: 1;
         }
     }
 }
@@ -63,9 +81,6 @@
         box-shadow:none;
         transition: none;
 
-        transform:translatey(0);
-
-
         &__list{
             display: flex;
             align-items: stretch;
@@ -77,7 +92,6 @@
             align-items: stretch;
             height: 100%;
         }
-
         &__link{
             display: flex;
             align-items: center;
@@ -89,6 +103,10 @@
             color: $color-grayish-blue;
             text-align: center;
             transition:color 0.3s; 
+
+            &::before{
+                display:none;
+            }
 
             /*
              * allows a color gradient to be used in the hover state bottom border (can't use gradient on border)
@@ -108,7 +126,6 @@
                 transform-origin: bottom;
                 transition: transform 0.3s ease 0.1s;
             }
-        
             &:hover{
                 background-image: none;
                 color: $color-dark-blue;
@@ -130,5 +147,4 @@
         padding: 0 8px;
         font-size: $font-size-sm;
     }
-
 }
