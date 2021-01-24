@@ -666,7 +666,7 @@ p {
   min-height: 250px;
   max-height: 400px;
   overflow: hidden;
-  background: url(images/bg-intro-mobile.svg) right bottom/cover no-repeat; }
+  background: url("../images/bg-intro-mobile.svg") right bottom/cover no-repeat; }
 
 .hero__image {
   height: 150%;
@@ -709,7 +709,7 @@ p {
       left: 50%;
       bottom: 0;
       width: 50%;
-      background: url(../images/bg-intro-desktop.svg) left 0% bottom 0%/auto 135% no-repeat; }
+      background: url("../images/bg-intro-desktop.svg") left 0% bottom 0%/auto 135% no-repeat; }
     .hero__image {
       height: 760px;
       width: auto;
