@@ -544,7 +544,7 @@ p {
  */
 .footer {
   padding-top: 40px;
-  padding-bottom: 48px;
+  padding-bottom: 40px;
   padding-left: 24px;
   padding-right: 24px;
   text-align: center; }
@@ -576,6 +576,7 @@ p {
 
 @media (min-width: 1040px) {
   .footer {
+    padding-bottom: 48px;
     display: grid;
     grid-template-columns: 1fr 1.2fr 1.5fr;
     grid-template-areas: "logo   nav cta" "social nav legal"; }

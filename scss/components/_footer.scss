@@ -5,7 +5,7 @@
 
  .footer{
      padding-top: $content-space-40;
-     padding-bottom: $content-space-48;
+     padding-bottom: $content-space-40;
      padding-left: $content-space-24;
      padding-right: $content-space-24;
      text-align:center;
@@ -51,6 +51,7 @@
 
  @include bp($xl){
      .footer{
+        padding-bottom: $content-space-48;
         display: grid;
         grid-template-columns: 1fr 1.2fr 1.5fr; 
         // grid-auto-rows: minmax(100px, auto);
